@@ -10,7 +10,9 @@ export const DetailItem: React.FC<DetailItemProps> = React.memo(
 
     if (error) {
       status = (
-        <span className="text-secondary">{errorMessage || t('dashboard~Not available')}</span>
+        <span className="text-secondary">
+          {errorMessage || t('ceph-storage-plugin~Not available')}
+        </span>
       );
     } else if (isLoading) {
       status = <div className="skeleton-text" />;

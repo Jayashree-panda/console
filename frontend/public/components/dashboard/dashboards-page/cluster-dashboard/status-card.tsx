@@ -108,9 +108,9 @@ const ClusterAlerts = withDashboardResources(
         <StatusItem
           key="clusterUpdate"
           Icon={UpdateIcon}
-          message={t('dashboard~A cluster version update is available')}
+          message={t('ceph-storage-plugin~A cluster version update is available')}
         >
-          <Link to="/settings/cluster?showVersions">{t('dashboard~Update cluster')}</Link>
+          <Link to="/settings/cluster?showVersions">{t('ceph-storage-plugin~Update cluster')}</Link>
         </StatusItem>,
       );
     }
@@ -183,8 +183,10 @@ export const StatusCard = connect<StatusCardProps>(mapStateToProps)(({ k8sModels
   return (
     <DashboardCard gradient data-test-id="status-card">
       <DashboardCardHeader>
-        <DashboardCardTitle>{t('dashboard~Status')}</DashboardCardTitle>
-        <DashboardCardLink to="/monitoring/alerts">{t('dashboard~View alerts')}</DashboardCardLink>
+        <DashboardCardTitle>{t('ceph-storage-plugin~Status')}</DashboardCardTitle>
+        <DashboardCardLink to="/monitoring/alerts">
+          {t('ceph-storage-plugin~View alerts')}
+        </DashboardCardLink>
       </DashboardCardHeader>
       <DashboardCardBody>
         <HealthBody>

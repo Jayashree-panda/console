@@ -67,7 +67,7 @@ export const MultilineUtilizationItem: React.FC<MultilineUtilizationItemProps> =
         height={70}
         byteDataType={byteDataType}
         showAllTooltip
-        ariaChartLinkLabel={t('dashboard~View {{title}} metrics in query browser', {
+        ariaChartLinkLabel={t('ceph-storage-plugin~View {{title}} metrics in query browser', {
           title,
         })}
         ariaChartTitle={title}
@@ -157,7 +157,7 @@ export const UtilizationItem: React.FC<UtilizationItemProps> = React.memo(
 
     const chart = (
       <AreaChart
-        ariaChartLinkLabel={t('dashboard~View {{title}} metrics in query browser', {
+        ariaChartLinkLabel={t('ceph-storage-plugin~View {{title}} metrics in query browser', {
           title,
         })}
         ariaChartTitle={title}
@@ -245,15 +245,18 @@ export const UtilizationItem: React.FC<UtilizationItemProps> = React.memo(
               >
                 {humanLimit && (
                   <span>
-                    {t('dashboard~{{humanAvailable}} available of {{humanLimit}} total limit', {
-                      humanAvailable,
-                      humanLimit,
-                    })}
+                    {t(
+                      'ceph-storage-plugin~{{humanAvailable}} available of {{humanLimit}} total limit',
+                      {
+                        humanAvailable,
+                        humanLimit,
+                      },
+                    )}
                   </span>
                 )}
                 {!humanLimit && humanMax && (
                   <span>
-                    {t('dashboard~{{humanAvailable}} available of {{humanMax}}', {
+                    {t('ceph-storage-plugin~{{humanAvailable}} available of {{humanMax}}', {
                       humanAvailable,
                       humanMax,
                     })}
@@ -261,7 +264,7 @@ export const UtilizationItem: React.FC<UtilizationItemProps> = React.memo(
                 )}
                 {!humanLimit && !humanMax && (
                   <span>
-                    {t('dashboard~{{humanAvailable}} available', {
+                    {t('ceph-storage-plugin~{{humanAvailable}} available', {
                       humanAvailable,
                     })}
                   </span>

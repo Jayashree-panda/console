@@ -60,7 +60,7 @@ const ClusterVersion: React.FC<ClusterVersionProps> = ({ cv }) => {
           <div>
             <Link to="/settings/cluster/">
               <InProgressIcon className="co-icon-and-text__icon" />
-              {t('dashboard~Updating')}
+              {t('ceph-storage-plugin~Updating')}
             </Link>
           </div>
         </>
@@ -73,7 +73,7 @@ const ClusterVersion: React.FC<ClusterVersionProps> = ({ cv }) => {
             <div>
               <Link to="/settings/cluster?showVersions">
                 <BlueArrowCircleUpIcon className="co-icon-space-r" />
-                {t('dashboard~Update cluster')}
+                {t('ceph-storage-plugin~Update cluster')}
               </Link>
             </div>
           )}
@@ -83,7 +83,7 @@ const ClusterVersion: React.FC<ClusterVersionProps> = ({ cv }) => {
       return lastVersion ? (
         <span className="co-select-to-copy">{lastVersion}</span>
       ) : (
-        <span className="text-secondary">{t('dashboard~Not available')}</span>
+        <span className="text-secondary">{t('ceph-storage-plugin~Not available')}</span>
       );
   }
 };
@@ -138,9 +138,9 @@ export const DetailsCard_ = connect(mapStateToProps)(
     return (
       <DashboardCard data-test-id="details-card">
         <DashboardCardHeader>
-          <DashboardCardTitle>{t('dashboard~Details')}</DashboardCardTitle>
+          <DashboardCardTitle>{t('ceph-storage-plugin~Details')}</DashboardCardTitle>
           <DashboardCardLink to="/settings/cluster/">
-            {t('dashboard~View settings')}
+            {t('ceph-storage-plugin~View settings')}
           </DashboardCardLink>
         </DashboardCardHeader>
         <DashboardCardBody isLoading={flagPending(openshiftFlag)}>
@@ -148,7 +148,7 @@ export const DetailsCard_ = connect(mapStateToProps)(
             {openshiftFlag ? (
               <>
                 <DetailItem
-                  title={t('dashboard~Cluster API address')}
+                  title={t('ceph-storage-plugin~Cluster API address')}
                   isLoading={!infrastructureLoaded}
                   error={!!infrastructureError || (infrastructure && !infrastuctureApiUrl)}
                   valueClassName="co-select-to-copy"
@@ -156,7 +156,7 @@ export const DetailsCard_ = connect(mapStateToProps)(
                   {infrastuctureApiUrl}
                 </DetailItem>
                 <DetailItem
-                  title={t('dashboard~Cluster ID')}
+                  title={t('ceph-storage-plugin~Cluster ID')}
                   error={!!clusterVersionError || (clusterVersionLoaded && !clusterId)}
                   isLoading={!clusterVersionLoaded}
                 >
@@ -164,13 +164,13 @@ export const DetailsCard_ = connect(mapStateToProps)(
                   {window.SERVER_FLAGS.branding !== 'okd' &&
                     window.SERVER_FLAGS.branding !== 'azure' && (
                       <ExternalLink
-                        text={t('dashboard~OpenShift Cluster Manager')}
+                        text={t('ceph-storage-plugin~OpenShift Cluster Manager')}
                         href={getOCMLink(clusterId)}
                       />
                     )}
                 </DetailItem>
                 <DetailItem
-                  title={t('dashboard~Provider')}
+                  title={t('ceph-storage-plugin~Provider')}
                   error={!!infrastructureError || (infrastructure && !infrastructurePlatform)}
                   isLoading={!infrastructureLoaded}
                   valueClassName="co-select-to-copy"
@@ -178,14 +178,14 @@ export const DetailsCard_ = connect(mapStateToProps)(
                   {infrastructurePlatform}
                 </DetailItem>
                 <DetailItem
-                  title={t('dashboard~OpenShift version')}
+                  title={t('ceph-storage-plugin~OpenShift version')}
                   error={!!clusterVersionError || (clusterVersionLoaded && !openShiftVersion)}
                   isLoading={!clusterVersionLoaded}
                 >
                   <ClusterVersion cv={clusterVersionData} />
                 </DetailItem>
                 <DetailItem
-                  title={t('dashboard~Update channel')}
+                  title={t('ceph-storage-plugin~Update channel')}
                   isLoading={!clusterVersionLoaded && !clusterVersionError}
                   error={!!clusterVersionError || (clusterVersionLoaded && !cvChannel)}
                   valueClassName="co-select-to-copy"
@@ -194,18 +194,18 @@ export const DetailsCard_ = connect(mapStateToProps)(
                 </DetailItem>
                 {isSingleNode(infrastructure) && (
                   <DetailItem
-                    title={t('dashboard~Control plane high availability')}
+                    title={t('ceph-storage-plugin~Control plane high availability')}
                     isLoading={false}
                     valueClassName="co-select-to-copy"
                   >
-                    {t('dashboard~No (single master)')}
+                    {t('ceph-storage-plugin~No (single master)')}
                   </DetailItem>
                 )}
               </>
             ) : (
               <DetailItem
                 key="kubernetes"
-                title={t('dashboard~Kubernetes version')}
+                title={t('ceph-storage-plugin~Kubernetes version')}
                 error={!!k8sVersionError || (k8sVersion && !k8sGitVersion)}
                 isLoading={!k8sVersion}
                 valueClassName="co-select-to-copy"

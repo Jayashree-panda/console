@@ -21,7 +21,7 @@ export const Activity: React.FC<ActivityProps> = ({ timestamp, children }) => {
     <div className="co-activity-item__ongoing" data-test="activity">
       {timestamp && (
         <span className="text-secondary">
-          {t('dashboard~Started')}{' '}
+          {t('ceph-storage-plugin~Started')}{' '}
           <span data-test="timestamp">
             <Timestamp simple timestamp={timestamp.toString()} />
           </span>
@@ -91,7 +91,7 @@ export const RecentEventsBodyContent: React.FC<RecentEventsBodyContentProps> = (
   if (sortedEvents.length === 0) {
     return (
       <Activity>
-        <div className="text-secondary">{t('dashboard~There are no recent events.')}</div>
+        <div className="text-secondary">{t('ceph-storage-plugin~There are no recent events.')}</div>
       </Activity>
     );
   }
@@ -112,7 +112,7 @@ export const RecentEventsBodyContent: React.FC<RecentEventsBodyContentProps> = (
           to={moreLink}
           data-test="events-view-all-link"
         >
-          {t('dashboard~View all events')}
+          {t('ceph-storage-plugin~View all events')}
         </Link>
       )}
     </>
@@ -141,7 +141,7 @@ export const RecentEventsBody: React.FC<RecentEventsBodyProps> = (props) => {
   return (
     <>
       <div className="co-activity-card__recent-title" data-test="activity-recent-title">
-        {t('dashboard~Recent events')}
+        {t('ceph-storage-plugin~Recent events')}
         <PauseButton paused={paused} togglePause={togglePause} />
       </div>
       <RecentEventsBodyContent {...props} paused={paused} setPaused={setPaused} />
@@ -184,14 +184,16 @@ export const OngoingActivityBody: React.FC<OngoingActivityBodyProps> = ({
       allActivities
     ) : (
       <Activity>
-        <div className="text-secondary">{t('dashboard~There are no ongoing activities.')}</div>
+        <div className="text-secondary">
+          {t('ceph-storage-plugin~There are no ongoing activities.')}
+        </div>
       </Activity>
     );
   }
   return (
     <>
       <div className="co-activity-card__ongoing-title" data-test="ongoing-title">
-        {t('dashboard~Ongoing')}
+        {t('ceph-storage-plugin~Ongoing')}
       </div>
       <div className="co-activity-card__ongoing-body">{body}</div>
     </>

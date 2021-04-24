@@ -18,7 +18,7 @@ const UtilizationAxis: React.FC<UtilizationAxisProps> = ({ timestamps = [] }) =>
     <div ref={containerRef}>
       {!!timestamps.length && (
         <ChartAxis
-          containerComponent={<ChartContainer title={t('dashboard~time axis')} />}
+          containerComponent={<ChartContainer title={t('ceph-storage-plugin~time axis')} />}
           scale={{ x: 'time' }}
           domain={{ x: [timestamps[0], timestamps[timestamps.length - 1]] }}
           tickFormat={formatDate}
@@ -45,7 +45,7 @@ export const UtilizationBody: React.FC<UtilizationBodyProps> = ({ timestamps, ch
           {t('public~Resource')}
         </span>
         <span className="co-utilization-card__item-text" data-test="utilization-card-item-text">
-          {t('dashboard~Usage')}
+          {t('ceph-storage-plugin~Usage')}
         </span>
       </div>
       <div className="co-utilization-card__item-chart co-utilization-card__item-chart--times">

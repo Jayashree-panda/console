@@ -177,8 +177,10 @@ export const ActivityCard: React.FC<{}> = React.memo(() => {
   return (
     <DashboardCard gradient data-test-id="activity-card">
       <DashboardCardHeader>
-        <DashboardCardTitle>{t('dashboard~Activity')}</DashboardCardTitle>
-        <DashboardCardLink to={viewEvents}>{t('dashboard~View events')}</DashboardCardLink>
+        <DashboardCardTitle>{t('ceph-storage-plugin~Activity')}</DashboardCardTitle>
+        <DashboardCardLink to={viewEvents}>
+          {t('ceph-storage-plugin~View events')}
+        </DashboardCardLink>
       </DashboardCardHeader>
       <DashboardCardBody>
         <ActivityBody className="co-overview-dashboard__activity-body">

@@ -25,21 +25,21 @@ export const healthStateMessage = (state: keyof typeof HealthState, t: TFunction
     case HealthState.OK:
       return '';
     case HealthState.UNKNOWN:
-      return t('dashboard~Unknown');
+      return t('ceph-storage-plugin~Unknown');
     case HealthState.PROGRESS:
-      return t('dashboard~Pending');
+      return t('ceph-storage-plugin~Pending');
     case HealthState.UPDATING:
-      return t('dashboard~Updating');
+      return t('ceph-storage-plugin~Updating');
     case HealthState.WARNING:
-      return t('dashboard~Degraded');
+      return t('ceph-storage-plugin~Degraded');
     case HealthState.ERROR:
-      return t('dashboard~Degraded');
+      return t('ceph-storage-plugin~Degraded');
     case HealthState.LOADING:
-      return t('dashboard~Loading');
+      return t('ceph-storage-plugin~Loading');
     case HealthState.NOT_AVAILABLE:
-      return t('dashboard~Not available');
+      return t('ceph-storage-plugin~Not available');
     default:
-      return t('dashboard~Unknown');
+      return t('ceph-storage-plugin~Unknown');
   }
 };
 

@@ -160,7 +160,7 @@ export const CreateInternalCluster: React.FC<CreateInternalClusterProps> = ({
           >
             <p>
               {t(
-                'ceph-storage-plugin~Can be used on any platform, except bare metal. It means that OCS uses an infrastructure storage class, provided by the hosting platform. For example, gp2 on AWS, thin on VMWare, etc.',
+                'ceph-storage-plugin~Can be used on any platform, except bare metal. It means that OCS uses an infrastructure StorageClass, provided by the hosting platform. For example, gp2 on AWS, thin on VMWare, etc.',
               )}
             </p>
           </Alert>

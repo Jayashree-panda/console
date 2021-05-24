@@ -69,7 +69,7 @@ export const ReviewAndCreate: React.FC<ReviewAndCreateProps> = ({
                 nodeCount: nodes.length,
                 count: nodes.length,
               })}{' '}
-              {t('ceph-storage-plugin~selected based on the created storage class:')}
+              {t('ceph-storage-plugin~selected based on the created StorageClass:')}
               <span className="text-muted">{scName ?? t('ceph-storage-plugin~None')}</span>
             </p>
             <NodesCard nodes={nodes} />

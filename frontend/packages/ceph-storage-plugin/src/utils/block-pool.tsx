@@ -62,7 +62,7 @@ export const PROGRESS_STATUS = (t: TFunction): ProgressStatusProps[] => [
     name: POOL_PROGRESS.CLUSTERNOTREADY,
     icon: LockIcon,
     desc: t(
-      'ceph-storage-plugin~The creation of an OCS storage cluster is still in progress or has failed. Please try again after the storage cluster is ready to use.',
+      'ceph-storage-plugin~The creation of an OpenShift Container Storage cluster is still in progress or has failed. Try again after the storage cluster is ready to use.',
     ),
     className: '',
   },
@@ -70,14 +70,14 @@ export const PROGRESS_STATUS = (t: TFunction): ProgressStatusProps[] => [
     name: POOL_PROGRESS.NOTALLOWED,
     icon: LockIcon,
     desc: t(
-      "ceph-storage-plugin~Pool management tasks are not supported for default pool and Openshift Container Storage's  external mode.",
+      "ceph-storage-plugin~Pool management tasks are not supported for default pool and OpenShift Container Storage's external mode.",
     ),
     className: '',
   },
   {
     name: POOL_PROGRESS.NOTREADY,
     icon: ExclamationCircleIcon,
-    desc: t('ceph-storage-plugin~Pool {name} got created with errors.'),
+    desc: t('ceph-storage-plugin~Pool {name} was created with errors.'),
     className: 'ceph-block-pool__error-icon',
   },
 ];

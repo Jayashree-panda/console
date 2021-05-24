@@ -57,19 +57,19 @@ export const VALIDATIONS = (type: keyof typeof ValidationType, t: TFunction): Va
     case ValidationType.INTERNALSTORAGECLASS:
       return {
         variant: AlertVariant.danger,
-        title: t('ceph-storage-plugin~Select a storage class to continue'),
+        title: t('ceph-storage-plugin~Select a StorageClass to continue'),
         text: t(
-          'ceph-storage-plugin~This is a required field. The Storage Class will be used to request storage from the underlying infrastructure to create the backing persistent volumes that will be used to provide the OpenShift Container Storage (OCS) service.',
+          'ceph-storage-plugin~This is a required field. The StorageClass will be used to request storage from the underlying infrastructure to create the backing persistent volumes that will be used to provide the OpenShift Container Storage (OCS) service.',
         ),
         link: '/k8s/cluster/storageclasses/~new/form',
-        linkText: t('ceph-storage-plugin~Create new storage class'),
+        linkText: t('ceph-storage-plugin~Create new StorageClass'),
       };
     case ValidationType.BAREMETALSTORAGECLASS:
       return {
         variant: AlertVariant.danger,
-        title: t('ceph-storage-plugin~Select a storage class to continue'),
+        title: t('ceph-storage-plugin~Select a StorageClass to continue'),
         text: t(
-          'ceph-storage-plugin~This is a required field. The Storage Class will be used to request storage from the underlying infrastructure to create the backing persistent volumes that will be used to provide the OpenShift Container Storage (OCS) service.',
+          'ceph-storage-plugin~This is a required field. The StorageClass will be used to request storage from the underlying infrastructure to create the backing persistent volumes that will be used to provide the OpenShift Container Storage (OCS) service.',
         ),
       };
     case ValidationType.ALLREQUIREDFIELDS:
@@ -77,7 +77,7 @@ export const VALIDATIONS = (type: keyof typeof ValidationType, t: TFunction): Va
         variant: AlertVariant.danger,
         title: t('ceph-storage-plugin~All required fields are not set'),
         text: t(
-          'ceph-storage-plugin~In order to create the storage cluster you must set the storage class, select at least 3 nodes (preferably in 3 different zones) and meet the minimum or recommended requirement',
+          'ceph-storage-plugin~In order to create the storage cluster you must set the StorageClass, select at least 3 nodes (preferably in 3 different zones) and meet the minimum or recommended requirement',
         ),
       };
     case ValidationType.MINIMUMNODES:
@@ -85,7 +85,7 @@ export const VALIDATIONS = (type: keyof typeof ValidationType, t: TFunction): Va
         variant: AlertVariant.danger,
         title: t('ceph-storage-plugin~Minimum Node Requirement'),
         text: t(
-          'ceph-storage-plugin~The OCS Storage cluster require a minimum of 3 nodes for the initial deployment. Please choose a different storage class or go to create a new volume set that matches the minimum node requirement.',
+          'ceph-storage-plugin~The OCS Storage cluster require a minimum of 3 nodes for the initial deployment. Please choose a different StorageClass or go to create a new volume set that matches the minimum node requirement.',
         ),
         actionLinkText: t('ceph-storage-plugin~Create new volume set instance'),
         actionLinkStep: CreateStepsSC.DISCOVER,
@@ -125,7 +125,7 @@ export const VALIDATIONS = (type: keyof typeof ValidationType, t: TFunction): Va
       return {
         variant: AlertVariant.info,
         title: t(
-          'ceph-storage-plugin~When the nodes in the selected storage class are spread across fewer than 3 availability zones, the storage cluster will be deployed with the host based failure domain.',
+          'ceph-storage-plugin~When the nodes in the selected StorageClass are spread across fewer than 3 availability zones, the storage cluster will be deployed with the host based failure domain.',
         ),
       };
     default:

@@ -276,7 +276,7 @@ const CreateStorageClusterWizard: React.FC<CreateStorageClusterWizardProps> = ({
             actionClose={<AlertActionCloseButton onClose={() => setShowInfoAlert(false)} />}
           >
             {t(
-              'ceph-storage-plugin~Can be used on any platform. It means that OCS uses attached disks, via Local Storage Operator. In this case, the infrastructure storage class is actually provided by LSO, on top of attached drives.',
+              'ceph-storage-plugin~Can be used on any platform. It means that OCS uses attached disks, via Local Storage Operator. In this case, the infrastructure StorageClass is actually provided by LSO, on top of attached drives.',
             )}
           </Alert>
         )}

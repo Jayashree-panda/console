@@ -60,7 +60,7 @@ export const EncryptionFormGroup: React.FC<EncryptionFormGroupProps> = ({
   );
 
   const encryptionTooltip = t(
-    'ceph-storage-plugin~The storage cluster encryption level can be set to include all components under the cluster (including storage class and PVs) or to include only storage class encryption. PV encryption can use an auth token that will be used with the KMS configuration to allow multi-tenancy.',
+    'ceph-storage-plugin~The storage cluster encryption level can be set to include all components under the cluster (including StorageClass and PVs) or to include only StorageClass encryption. PV encryption can use an auth token that will be used with the KMS configuration to allow multi-tenancy.',
   );
 
   React.useEffect(() => {

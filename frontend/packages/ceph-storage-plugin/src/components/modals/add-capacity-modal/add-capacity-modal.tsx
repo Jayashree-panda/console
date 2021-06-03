@@ -224,7 +224,7 @@ export const AddCapacityModal = (props: AddCapacityModalProps) => {
                 aria-label="requestSize"
                 data-test-id="requestSize"
               />
-              {provisionedCapacity && (
+              {!!provisionedCapacity && (
                 <TextContent className="ceph-add-capacity__provisioned-capacity">
                   {' '}
                   {t('ceph-storage-plugin~x {{ replica, number }} replicas =', {
